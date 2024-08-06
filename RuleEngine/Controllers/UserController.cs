@@ -21,7 +21,7 @@ namespace RuleEngine.Controllers
                 var validatorResult = userValidator.Validate( new ValidationContext <UserDiscount>(userDiscount,null,new RulesetValidatorSelector(new[] { "CalculateDiscount" })));
                 if (validatorResult.IsValid)
                 {
-                    return Ok("Discount Calculation Successfull");
+                    return Ok(new { Messagr = userDiscount.DiscountMessage ?? "Discount Calculation Successfull" });
                 }
                 else
                 {
