@@ -12,6 +12,7 @@ namespace RuleEngine.Controllers
     {
         [HttpGet]
         [Route("getDiscount")]
+        [ProducesResponseType<string>(StatusCodes.Status200OK)]
         public IActionResult GetUserDiscount()
         {
             try
